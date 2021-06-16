@@ -22,7 +22,7 @@ height: 30px;
 display: inline-block;
 padding-right: 10px;
 }
-/* Purple sky image with header */
+/* Large image with title */
 .object-fill {
     position: relative;
     height: 500px;
@@ -33,15 +33,21 @@ padding-right: 10px;
     background-position: bottom center;
     background-size: cover;
 }
+/* UFO Sightings */
 h1 {
     font-family: 'Orbitron', serif;
     font-size: 50px;
     color: purple;
+    font-variant: small-caps;
+    letter-spacing: 2px;
     text-align: center;
 }
+/* Are We Alone? */
 h2 {
     font-family: 'Orbitron', serif;
     font-size: 50px;
     color: purple;
+    font-variant: small-caps;
+    letter-spacing: 2px;
     text-align: center;
 }

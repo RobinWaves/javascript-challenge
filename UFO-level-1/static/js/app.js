@@ -4,6 +4,12 @@ var tableData = data;
 // Get a reference to the table body
 var tbody = d3.select("tbody");
 
+// Get a reference to the table
+var table = d3.select("table");
+
+// Use D3 to set the table class to `table table-striped`
+table.attr("class", "table table-striped table-dark");
+
 console.log(tableData);
 // Append a table to index.html add new rows of data for each ufo sighting
 // Column for date/time, city, state, coutnry, shape and comment // Array of Dictionaries
