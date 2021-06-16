@@ -6,13 +6,13 @@
     background-color: black;
     border-bottom: 5px solid #05ff17;
 }
-/* Nav bar text */
+/* Navbar text */
 .navbar-brand {
     color: #05ff17;
-    font-family: Blippo, fantasy, sans-serif;
+    font-family: 'Orbitron', serif;
+    font-size: 25px;
     font-variant: small-caps;
     letter-spacing: 2px;
-    font-size: 25px;
     text-decoration: none;
 }
 /* Little UFO in Navbar */
@@ -22,7 +22,20 @@ height: 30px;
 display: inline-block;
 padding-right: 10px;
 }
-
-.object-fit_fill { 
-    object-fit: cover;
+/* Purple sky image with header */
+.object-fill {
+    position: relative;
+    height: 500px;
+    padding: 10px;
+    background: black;
+    background-image: url(../images/UFO2.jpg);
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: cover;
+}
+h1 {
+    font-family: 'Orbitron', serif;
+    font-size: 50px;
+    color: purple;
+    text-align: center;
 }

@@ -12,6 +12,7 @@ var tableData = data;
 //durationMinutes: "5 mins.",
 //comments: "4 bright green circles high in the sky going in circles then one bright green light at my front door."
 
-tableData.forEach(function(datetime) {
-    console.log(datetime);
+tableData.forEach(sighting => { var row = tbody.append("tr");
+    Object.entries(sighting).forEach([key, value]);
+    row.append("td").text(value);
 });
