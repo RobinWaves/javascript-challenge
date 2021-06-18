@@ -7,19 +7,15 @@
   <link rel="icon" type="image/png" href="static/images/favicon.png">
   <title>UFO Finder</title>
   
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css"> 
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
-  
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
   <link rel="stylesheet" href="static/css/style.css">
-
 </head>
 <body>
+  <!-- Nav bar with icon/image -->
   <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
@@ -28,29 +24,51 @@
       </a>
     </div>
   </nav>
-  
+  <!-- Large background image with header text -->
   <div class="object-fill">
     <h1>UFO Sightings</h1>
     <h2>Are We alone?</h2>
   </div> 
-
-  <div class="col-md-10"> 
-    <table class="ufotable">
-      <thead>
-        <tr>
-          <th class="table-head">Date</th>
-          <th class="table-head">City</th>
-          <th class="table-head">State</th>
-          <th class="table-head">Country</th>
-          <th class="table-head">Shape</th>
-          <th class="table-head">Duration</th>
-          <th class="table-head">Comments</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+  <!-- Form and Table -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="panel panel-default">
+          <div class="panel-heading">Filter Search</div>
+            <div class="panel-body">
+              <form id="form">
+                <div class="form-group">
+                  <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                      <label for="date">Enter a Date</label>
+                      <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                    </li>
+                  </ul>
+                </div>
+                <button id="button" type="button" class="btn btn-default">Filter the Table</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> <!-- Close col-md-2 -->
+      <div class="col-md-10">
+        <table class="ufotable">
+          <thead>
+            <tr>
+              <th class="table-head">Date</th>
+              <th class="table-head">City</th>
+              <th class="table-head">State</th>
+              <th class="table-head">Country</th>
+              <th class="table-head">Shape</th>
+              <th class="table-head">Duration</th>
+              <th class="table-head">Comments</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div> <!-- Close col-md-10 -->
+    </div>
   </div>
-
 </body>
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -58,61 +76,3 @@
 <script src="static/js/app.js"></script>
 
 </html>
-
-<!--
-  <div class="hero text-center">
-      <h1>UFO Sightings</h1>
-      <p>The Truth is Out There</p>
-    </div>
-    <div class="container">
-      <div class="row margin-top-50">
-        <div class="col-md-2">
-          <aside class="filters">
-            <div class="panel panel-default">
-              <div class="panel-heading">Filter Search</div>
-              <div class="panel-body">
-                <form>
-                  <div class="form-group">
-                    <ul class="list-group" id="filters">
-                      <li class="filter list-group-item">
-                        <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
-                      </li>
-                    </ul>
-                  </div>
-                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
-                </form>
-              </div>
-            </div>
-          </aside>
-        </div>
-        <div class="col-md-10">
-          <div id="table-area" class="">
-            <table id="ufo-table" class="table table-striped">
-              <thead>
-                <tr>
-                  <th class="table-head">Date</th>
-                  <th class="table-head">City</th>
-                  <th class="table-head">State</th>
-                  <th class="table-head">Country</th>
-                  <th class="table-head">Shape</th>
-                  <th class="table-head">Duration</th>
-                  <th class="table-head">Comments</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="footer">
-      <span class="bottom">UFO Sightings</span>
-    </footer>
-  </div>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="static/js/data.js"></script>
-  <script src="static/js/app.js"></script>
-</body>
-
-</html> -->
