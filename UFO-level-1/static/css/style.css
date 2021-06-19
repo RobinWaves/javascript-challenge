@@ -17,40 +17,83 @@
 }
 /* Little UFO in Navbar */
 .nav-ufo {
-width: 30px;
-height: 30px;
-display: inline-block;
-padding-right: 10px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    padding-right: 10px;
 }
 /* Large image with title */
 .object-fill {
     position: relative;
-    height: 350px;
+    height: 400px;
     padding: 10px;
-    background: black;
     background-image: url(../images/UFO2.jpg);
     background-attachment: fixed;
     background-position: bottom center;
     background-size: cover;
 }
-/* UFO Sightings */
-h1 {
+/* Are We Alone?  */
+.object-fill p {
     font-family: 'Orbitron', serif;
-    font-size: 50px;
     color: #BE00C5;
     font-variant: small-caps;
     letter-spacing: 2px;
     text-align: center;
+    padding-top: 270px;
 }
-/* Are We Alone?  */
-h2 {
+/* Filter Search Row */
+.row2 {
+    background-color: #000000;
+    color: #BE00C5;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;  
+    font-weight: bolder; 
+    border-bottom: 5px solid #05ff17;
+} 
+.panel-heading {
     font-family: 'Orbitron', serif;
-    font-size: 50px;
+    font-size: 20px;
     color: #BE00C5;
     font-variant: small-caps;
     letter-spacing: 2px;
-    display: flex;
-    justify-content: center;
+    text-align: center;   
+}
+.panel-body {
+    font-family: 'Orbitron', serif;
+    font-size: 15px;
+    color: #BE00C5;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    text-align: center;   
+}
+/* Remove bullet from list */
+.list-group {
+    list-style-type: none;
+}
+/* Format Filter Button */
+#button {
+    background-color: #05ff17;
+    color: #000000;
+    padding: 5px 5px;
+    font-family: 'Orbitron', serif;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    border: 2px solid #808080;
+}
+/* Reset Table */
+.reset {
+    background-color: #05ff17;
+    color: #000000;
+    padding: 5px 5px;
+    font-family: 'Orbitron', serif;
+    text-align: center;
+    font-size: 15px; 
+    letter-spacing: 0px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #808080;
 }
 /* Main table */
 .ufotable {
@@ -78,9 +121,62 @@ h2 {
     background-color: #000000;
     color: 	#FFFFFF;
 }
-.row {
-margin-top: 30px;
-    margin-left: 30px;
-    color: #BE00C5;
-    font-weight: bolder;
+/* Blinking Title  */
+.sign {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    background-image: radial-gradient(
+            ellipse 50% 40% at 50% 50%,
+            #F5F5F5,
+            transparent
+    );
+    transform: translate(-50%, -50%);
+    letter-spacing: 2px;
+    left: 50%;
+    top: 50%;
+    font-family: 'Orbitron', serif;
+    text-transform: uppercase;
+    font-size: 80px;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #dbb4e5, 0 0 1.5rem #b36acb,
+        -0.2rem 0.1rem 1rem #b36acb, 0.2rem 0.1rem 1rem #9400d3,
+        0 -0.5rem 2rem #BE00C5, 0 0.5rem 3rem #BE00C5;
+    animation: shine 2s forwards, blink 3s 2s infinite; 
+}
+@keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+        color: #dbb4e5;
+        text-shadow: 0 0 0.6rem #dbb4e5, 0 0 1.5rem #b36acb,
+        -0.2rem 0.1rem 1rem #b36acb, 0.2rem 0.1rem 1rem #9400d3,
+        0 -0.5rem 2rem #BE00C5, 0 0.5rem 3rem #BE00C5;
+    }
+    28%,
+    33% {
+        color: #b36acb;
+        text-shadow: none;
+    }
+    82%,
+    97% {
+        color: #BE00C5;
+        text-shadow: none;
+    }
+}  
+@keyframes shine {
+    0% {
+        color: #cc00ff;
+        text-shadow: none;
+    }
+    100% {
+        color: #dbb4e5;
+        text-shadow: 0 0 0.6rem #dbb4e5, 0 0 1.5rem #ff65bd,
+            -0.2rem 0.1rem 1rem #b36acb, 0.2rem 0.1rem 1rem #9400d3,
+            0 -0.5rem 2rem #BE00C5, 0 0.5rem 3rem #BE00C5;
+    }
 }
