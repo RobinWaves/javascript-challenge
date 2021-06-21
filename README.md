@@ -35,6 +35,8 @@ Background: The extra terrestrial menace has come to Earth and ALIENS-R-REAL has
 ### Usage: 
 Run index.html in either UF0 Level 1 or Level 2 directories for a different search experience.
 
+* [UFO Level 1](UFO-level-1/index.html)
+* [UFO Level 2](UFO-level-2/index.html)
 
 - - -
 
