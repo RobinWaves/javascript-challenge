@@ -180,14 +180,14 @@
             0 -0.5rem 2rem #BE00C5, 0 0.5rem 3rem #BE00C5;
     }
 }
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 801px) {
     div.sign {
         font-size: 80px;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     div.sign {
-        font-size: 30px;
+        font-size: 50px;
     }
 }
