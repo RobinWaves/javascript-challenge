@@ -4,13 +4,12 @@ var tableData = data;
 // Get a reference to the table body
 var tbody = d3.select("tbody");
 
-// Append a table to index.html add all rows of data for each ufo sighting
+// Append initial table adding all rows for each ufo sighting
 tableData.forEach(sighting => {
     var row = tbody.append("tr");
     Object.entries(sighting).forEach(([key, value]) => row.append("td").text(value));
 });
-//----------------------------------------------------------------------------------------//
-// Select the button
+
 var button = d3.select("#button");
 // Select the form
 var form = d3.select("#form");
@@ -18,7 +17,7 @@ var form = d3.select("#form");
 // Create event handlers 
 button.on("click", filterDate);
 form.on("submit",filterDate);
-
+//----------------------------------------------------------------------------------------//
 // Event handler function for the form
 function filterDate() {
     // Prevent the page from refreshing
@@ -38,8 +37,10 @@ function filterDate() {
         Object.entries(sighting).forEach(([key, value]) => row.append("td").text(value));
     });    
 };
+//----------------------------------------------------------------------------------------//
 // Clears table body to append new rows
 function deleteTableBody() {
     tbody.selectAll("tr")
         .remove()
 }
+//----------------------------------------------------------------------------------------//
