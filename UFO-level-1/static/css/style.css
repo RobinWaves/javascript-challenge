@@ -121,7 +121,7 @@
     background-color: #000000;
     color: 	#FFFFFF;
 }
-/* Blinking Title  */
+/* Blinking Title - https://codemyui.com/neon-tube-text-animation-with-flicker-and-glow/ */
 .sign {
     position: absolute;
     display: flex;
