@@ -7,7 +7,7 @@ var tbody = d3.select("tbody");
 // Select the button
 var button = d3.select("#button");
 
-// Create an array of each sighting's value
+// Create an array of each sighting's value to load dropdown menus
 var allOptions = [];
 datetimes = tableData.map(date => date.datetime);
 allOptions.push(datetimes);
@@ -20,6 +20,16 @@ allOptions.push(countries);
 shapes = tableData.map(shape => shape.shape);
 allOptions.push(shapes);
 
+// Load inital sightings table
+init();
+// Load dropdown menu options
+for (var i = 0; i < 5; i++) {
+    var newStr = "selectOption" + i;
+    getOptions(allOptions[i], newStr);
+}
+//Create event handlers 
+button.on("click", updateTable);
+//-----------------------------------------------------------------//
 // Function to load initial table
 function init() {
     // Get a reference to the table body
@@ -31,8 +41,8 @@ function init() {
         Object.entries(sighting).forEach(([key, value]) => row.append("td").text(value));
     });
 }
-
-// Function to load all select options
+//-----------------------------------------------------------------//
+// Function to load all dropdown menu options
 function getOptions(criteria, newString) {
     // Delete duplicates
     let uniqueCriteria = [...new Set(criteria)];
@@ -46,13 +56,13 @@ function getOptions(criteria, newString) {
         select.appendChild(elem);
     } 
 }
-
+//-----------------------------------------------------------------//
 // Clears table body to append new rows
 function deleteTableBody() {
     tbody.selectAll("tr")
         .remove()
 }
-
+//-----------------------------------------------------------------//
 // This function is called when a dropdown menu item is selected
 function updateTable() {
     // Prevent the page from refreshing
@@ -68,21 +78,14 @@ function updateTable() {
     
     var filteredData = tableData.filter(obj => obj.datetime == filterDate || obj.city == filterCity 
                                 || obj.state == filterState || obj.country == filterCountry || obj.shape == filterShape);
-    
     console.log(filteredData);
 
     deleteTableBody();
 
+    // Append a new filtered table
     filteredData.forEach(sighting => {
         var row = tbody.append("tr");
         Object.entries(sighting).forEach(([key, value]) => row.append("td").text(value));
     });
 }
 //-----------------------------------------------------------------//
-init();
-for (var i = 0; i < 5; i++) {
-    var newStr = "selectOption" + i;
-    getOptions(allOptions[i], newStr);
-}
-//Create event handlers 
-button.on("click", updateTable);
