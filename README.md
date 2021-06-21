@@ -33,7 +33,7 @@ Background: The extra terrestrial menace has come to Earth and ALIENS-R-REAL has
     * js - data source and javascript code
 
 ### Usage: 
-Download all directories and files on your local machine.  Run index.html in either UF0 Level 1 or Level 2 directories for a different search experience.
+Run index.html in either UF0 Level 1 or Level 2 directories for a different search experience.
 
 
 - - -
