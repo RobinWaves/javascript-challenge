@@ -26,46 +26,71 @@
   </nav>
   <!-- Large background image with header text -->
   <div class="object-fill">
-    <h1>UFO Sightings</h1>
-    <h2>Are We alone?</h2>
-  </div> 
+    <div class="sign">
+      <span>UFO&nbsp</span>
+      <span>Sightings</span>
+    </div>
+    <p>Are We Alone?</p>
+  </div>
   <!-- Select Drowdowns -->
   <div class="container">
-    <p>Set filters to search UFO Sightings:</p>
-    <form>
-      <label for="date">Choose a date:</label>
-      <select name = "dropdown" id="date">
-        <label for="date">Choose a date:</label>
-        <option value = "Computer Architecture" selected>Computer Architecture</option>
-        <option value = "Java">Java</option>
-        <option value = "Discrete Mathematics">Discrete Mathematics</option>
-      </select>
-      <label for="city">Choose a city:</label>
-      <select name = "dropdown" id="city">
-        <option value = "Computer Architecture" selected>Computer Architecture</option>
-        <option value = "Java">Java</option>
-        <option value = "Discrete Mathematics">Discrete Mathematics</option>
-      </select>
-      <label for="state">Choose a state:</label>
-      <select name = "dropdown" id="state">
-        <option value = "Computer Architecture" selected>Computer Architecture</option>
-        <option value = "Java">Java</option>
-        <option value = "Discrete Mathematics">Discrete Mathematics</option>
-      </select>
-      <label for="country">Choose a country:</label>
-      <select name = "dropdown" id="country">
-        <option value = "Computer Architecture" selected>Computer Architecture</option>
-        <option value = "Java">Java</option>
-        <option value = "Discrete Mathematics">Discrete Mathematics</option>
-      </select>
-      <label for="shape">Choose a shape:</label>
-      <select name = "dropdown" id="shape">
-        <option value = "Computer Architecture" selected>Computer Architecture</option>
-        <option value = "Java">Java</option>
-        <option value = "Discrete Mathematics">Discrete Mathematics</option>
-      </select>
-    </form>
-  </div>
+    <div class="row2">
+      <div class="col-md-2">
+        <div class="panel panel-default">
+          <div class="panel-heading">filter search</div>
+            <div class="panel-body">
+              <form id="form">
+                <div class="form-group">
+                  <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                      <label>by date</label>
+                      <select id="selectOption0">
+                        <option></option>
+                      </select>
+                      <label>by city</label>
+                      <select id="selectOption1">
+                        <option></option>
+                      </select>
+                      <label>by state</label>
+                      <select id="selectOption2">
+                        <option></option>
+                      </select>
+                      <label>by country</label>
+                      <select id="selectOption3">
+                        <option></option>
+                      </select>
+                      <label>by shape</label>
+                      <select id="selectOption4">
+                        <option></option>
+                      </select>
+                    </li>
+                  </ul>
+                </div>
+                <button id="button" type="button" class="btn btn-default">Filter Table</button>
+                <a class="reset" href="index.html">Reset Table</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> <!-- Close col-md-2 -->
+      <div class="col-md-10">
+        <table class="ufotable">
+          <thead>
+            <tr>
+              <th class="table-head">Date</th>
+              <th class="table-head">City</th>
+              <th class="table-head">State</th>
+              <th class="table-head">Country</th>
+              <th class="table-head">Shape</th>
+              <th class="table-head">Duration</th>
+              <th class="table-head">Comments</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div> <!-- Close col-md-10 -->
+    </div> <!-- Close row2 -->
+  </div> <!-- Close container -->
 </body>
 
 <script src="https://d3js.org/d3.v5.min.js"></script>

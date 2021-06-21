@@ -5,7 +5,7 @@ var tableData = data;
 var tbody = d3.select("tbody");
 
 // Append a table to index.html add all rows of data for each ufo sighting
-data.forEach(sighting => {
+tableData.forEach(sighting => {
     var row = tbody.append("tr");
     Object.entries(sighting).forEach(([key, value]) => row.append("td").text(value));
 });

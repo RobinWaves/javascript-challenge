@@ -43,7 +43,7 @@
 }
 /* Filter Search Row */
 .row2 {
-    background-color: #000000;
+    background-image: url(../images/UFO2.jpg);
     color: #BE00C5;
     padding-top: 20px;
     padding-left: 30px;
@@ -178,5 +178,16 @@
         text-shadow: 0 0 0.6rem #dbb4e5, 0 0 1.5rem #ff65bd,
             -0.2rem 0.1rem 1rem #b36acb, 0.2rem 0.1rem 1rem #9400d3,
             0 -0.5rem 2rem #BE00C5, 0 0.5rem 3rem #BE00C5;
+    }
+}
+@media screen and (min-width: 601px) {
+    div.sign {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.sign {
+        font-size: 30px;
     }
 }
