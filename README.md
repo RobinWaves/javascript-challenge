@@ -40,6 +40,6 @@ Run index.html in either UF0 Level 1 or Level 2 directories for a different sear
 
 ### Dataset
 
-* [UFO Sightings Data](StarterCode/static/js/data.js)
+* [UFO Sightings Data](UFO-level-1/static/js/data.js)
 
 - - -
