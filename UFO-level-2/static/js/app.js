@@ -59,21 +59,11 @@ function updateTable() {
     console.log(date, city, state, country, shape);
 
     var filteredData = tableData;
-    if (date) {
-        filteredData = filteredData.filter(row => row.datetime === date); 
-    }
-    if (city) {
-        filteredData = filteredData.filter(row => row.city === city);       
-    }
-    if (state) {
-        filteredData = filteredData.filter(row => row.state === state);       
-    }
-    if (country) {
-        filteredData = filteredData.filter(row => row.country === country);       
-    }
-    if (shape) {
-        filteredData = filteredData.filter(row => row.shape === shape);       
-    }
+    if (date) { filteredData = filteredData.filter(d => d.datetime === date); }
+    if (city) { filteredData = filteredData.filter(d => d.city === city); }
+    if (state) { filteredData = filteredData.filter(d => d.state === state); }
+    if (country) { filteredData = filteredData.filter(d => d.country === country); }
+    if (shape) { filteredData = filteredData.filter(d => d.shape === shape); }
     console.log(filteredData);
 
     deleteTableBody();
