@@ -126,6 +126,16 @@ table thead {
     background-color: #000000;
     color: 	#FFFFFF;
 }
+/* No records found */
+.col-md-10 h1 {
+    font-family: 'Orbitron', serif;
+    color: #000000;
+    text-shadow: 2px 2px #05ff17;
+    text-align: center;
+    font-size: 35px;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+}
 /* Blinking Title - https://codemyui.com/neon-tube-text-animation-with-flicker-and-glow/ */ 
 .sign {
     position: absolute;
